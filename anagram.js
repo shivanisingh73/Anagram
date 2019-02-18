@@ -6,15 +6,15 @@ function anagram(string1,string2){
     var stringArray1 = [];
     var stringArray2 = [];
     
-    
+     
     for(var i=0; i<string1length; i++){
     stringArray1[i] =string1.charAt(i);
-    }
-    
-    for(var i=0; i<string2length; i++){
     stringArray2[i] =string2.charAt(i);
     }
-    
+    console.log(stringArray1);
+
+    console.log(stringArray2);
+
     var tmp1;
     for(var i=0; i<string1length; i++)
     {
@@ -29,6 +29,7 @@ function anagram(string1,string2){
             }
         }
     }
+    console.log(stringArray1);
 
     var tmp2;
     for(var i=0; i<string2length; i++)
@@ -43,21 +44,17 @@ function anagram(string1,string2){
             }
         }
     }
+
+    console.log(stringArray2);
     
-    for(var i=0; i<string1length; i++){
-            var text1 ="";
-            text1 += stringArray1[i];
-        }
-    
-    for(var i=0; i<string2length; i++){
-        var text2 ="";
-            text2 += stringArray2[i];
-        }
-    
-    if(text1 == text2){
+
+for(var k=0; k<string1length;k++){
+    if(stringArray1[k] == stringArray2[k]){
         console.log(true);
     }else{
         console.log(false);
     }
     }
-    anagram("abc ","cba");
+}
+
+    anagram("abc","cba");
